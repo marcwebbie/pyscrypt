@@ -1,6 +1,8 @@
 pyscrypt
 ========
 
+[![Build Status](https://travis-ci.org/marcwebbie/pyscrypt.svg)](https://travis-ci.org/marcwebbie/pyscrypt)
+
 A very simple, pure-Python implementation of the scrypt password-based key derivation function and scrypt file format libraries with no dependencies beyond standard Python libraries.
 
 
