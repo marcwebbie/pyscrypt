@@ -4,7 +4,6 @@ pyscrypt
 A very simple, pure-Python implementation of the scrypt password-based key derivation function and scrypt file format libraries with no dependencies beyond standard Python libraries.
 
 
-
 API
 ---
 
@@ -23,11 +22,11 @@ The scrypt algorithm is a password-based key derivation function, which takes in
 ```python
 import pyscrypt
 
-hashed = pyscrypt.hash(password = "correct horse battery staple", 
-                       salt = "seasalt", 
-                       N = 1024, 
-                       r = 1, 
-                       p = 1, 
+hashed = pyscrypt.hash(password = "correct horse battery staple",
+                       salt = "seasalt",
+                       N = 1024,
+                       r = 1,
+                       p = 1,
                        dkLen = 256)
 print hashed.encode('hex')
 ```
@@ -71,7 +70,6 @@ print f.valid
 ```
 
 
-
 Test Harness
 ------------
 
@@ -86,7 +84,7 @@ Test 3: pass
 Test 4: pass
 Test 5: pass
 
-# python tests/run-tests-file.py 
+# python tests/run-tests-file.py
 Version: 1.3.1
 Test Encrypt/Decrypt: text_length=3 result=pass valid=True
 Test Encrypt/Decrypt: text_length=16 result=pass valid=True
@@ -111,6 +109,7 @@ Notice that `valid` is sometimes None. The value of `valid` can take on one of t
 * **None** - File has not been entirely read, so the checksum cannot be verified
 * **True** - The end-of-file checksum is valid
 * **False** - The end-of-file checksum is invalid (some bytes in the file are corrupt)
+
 
 Performance
 -----------
@@ -153,14 +152,14 @@ It is written in pure Python. It is not meant to be fast, more of a reference so
 
 > python
 >>> import scrypt
->>> scrypt.hash(password = "correct horse staple battery", 
-                salt = "seasalt", 
-                N = 1024, 
-                p = 1, 
-                r = 1, 
+>>> scrypt.hash(password = "correct horse staple battery",
+                salt = "seasalt",
+                N = 1024,
+                p = 1,
+                r = 1,
                 buflen = 256)
 ```
-    
+
 **How do I get a question I have added?**
 E-mail me at pyscrypt@ricmoo.com with any questions, suggestions, comments, et cetera.
 
@@ -169,3 +168,31 @@ Umm... Ok? :-)
 
 _Bitcoin_  - `1LNdGsYtZXWeiKjGba7T997qvzrWqLXLma`
 
+
+***********************
+
+
+License MIT
+-----------
+
+> The MIT License (MIT)
+>
+> Copyright (c) 2014 Richard Moore
+>
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+> of this software and associated documentation files (the "Software"), to deal
+> in the Software without restriction, including without limitation the rights
+> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+> copies of the Software, and to permit persons to whom the Software is
+> furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included in
+> all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+> THE SOFTWARE.
