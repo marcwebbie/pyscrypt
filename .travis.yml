@@ -1,15 +1,11 @@
 language: python
 python:
   - "2.7"
-  - "3.2"
   - "3.3"
   - "3.4"
   - "pypy"
 allow_failures:
     - python: "pypy"
-install:
-  - "pip install -r requirements.txt"
-  - "pip install coveralls"
 script:
-  - "python setup.py develop"
-  - "python tests/test.py"
+  - "python tests/run-tests-file.py"
+  - "python tests/run-tests-hash.py"
